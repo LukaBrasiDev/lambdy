@@ -1,0 +1,22 @@
+worzymy klasę Person. Tworzysz listę z przykładowymi osobami (min 7), osoba powinna składac sie z wieku, imienia i nazwiska. (edited)
+Napisz program, który zgrupuje wszystkich ludzi po nazwiskach. Wypisz do konsoli, ktore nazwisko jest najpopularniejsze
+* Użyj strumieni \
+Zadanie
+2. Napisz program, który wyliczy średnią wartość wieku wszystkich ludzi
+Zadanie
+3. Napisz program, który znajdzie najstarszego człowieka i dopisz do jego imienia prefix "Mędrzec".
+Zadanie
+4. Wyobraź sobie, że tworzymy nadczłowieka. To człowiek składający się z wszystkich innych ludzi, jego imię tworzą pierwsze litery innych ludzi, jego nazwisko tworzą ostatnie litery innych ludzi, jego wiek to suma lat całej reszty ludzi (edited)
+
+5. Stwórz listę lat ludzi (List<Integer>) na podstawie listy ludzi
+
+6.  Znajdź człowieka, którego suma cyfr lat jest taka sama jak suma liter w imieniu
+
+7. Posortuj ludzi po wieku od najstarszego do najmłodszego
+
+8. Usuń ludzi ze zbioru, którzy występują podwójnie (są zdublowani). Następnie podaj ile takich ludzi było. (istnieje do tego metoda, przeszukaj dokumentacje)
+
+9. Utwórz klasę Animal, z polami wiek i imię. Na podstawie zbioru ludzi, utwórz zbiór zwierząt. Zwierzę przejmuje imię po złączeniu imienia i nazwiska człowieka, a wiek zwierzęcia to wiek człowieka podzielony przez 10
+
+10. Zamień wiek człowieka na psie lata, (n * 6 - 2), wyświetl tych ludzi, których wiek przekracza 50 lat po zmianie
+11. Zgrupuj ludzi, których suma liter w imieniu i nazwisku jest taka sama (edited)
