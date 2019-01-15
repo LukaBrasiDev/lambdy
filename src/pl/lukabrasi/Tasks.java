@@ -1,9 +1,11 @@
 package pl.lukabrasi;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Tasks {
     public static void main(String[] args) {
@@ -58,6 +60,39 @@ public class Tasks {
         personList.stream()
                 .sorted((s, s1) -> Integer.compare(s.getAge(), s1.getAge()) * -1)
                 .forEach(s -> System.out.println(s.getName() + " "));
+
+        //  11. Zgrupuj ludzi, których suma liter w imieniu i nazwisku jest taka sama (edited)
+
+        Map<Integer, List<Person>> grouped = personList
+                .stream()
+                .collect(Collectors.groupingBy(s -> s.getName().length() + s.getSurname().length()));
+        System.out.println(grouped);
+
+        //   10. Zamień wiek człowieka na psie lata, (n * 6 - 2), wyświetl tych ludzi, których wiek przekracza 50 lat po zmianie
+
+       /* personList.stream()
+                        .map(s -> new Person(s.getAge() * 6 - 2, s.getName(), s.getSurname())
+                        .filter(s -> s.getAge() > 50)
+                        .forEach(s -> System.out.println(s));*/
+
+
+       /* 4. Wyobraź sobie, że tworzymy nadczłowieka. To człowiek składający się z wszystkich innych ludzi,
+        jego imię tworzą pierwsze litery innych ludzi, jego nazwisko tworzą ostatnie litery innych ludzi,
+        jego wiek to suma lat całej reszty ludzi (edited)*/
+
+       personList.stream()
+               .map(s -> new Person(s.getAge(),s.getName().substring(0,1),s.getSurname().substring(0,1)))
+               .reduce((s,s1) -> new Person(s.getAge()+s1.getAge(),s.getName()+s1.getName(),s.getSurname()+s1.getSurname()))
+               .ifPresent(s -> System.out.println(s.getName()+" : "+s.getAge()));
+
+
+       //9.
+
+        personList.stream()
+                .map(s -> new Animal(s.getAge()/10, s.getName()+s.getSurname()))
+                .forEach(s-> System.out.println(s));
+
+
 
 
     }
